@@ -1,0 +1,258 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\views\\lichhen\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\views\\lichhen\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\controllers\\admin\\lichhencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\controllers\\admin\\lichhencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\views\\shop\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\views\\shop\\checkout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Migrations\\20241201050209_FixDonHang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PetCare\\Migrations\\20241201050209_FixDonHang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\controllers\\petshop\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\controllers\\petshop\\shopcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\views\\shared\\_layoutstore.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\views\\shared\\_layoutstore.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\models\\vmchitietdh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\models\\vmchitietdh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\views\\shop\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\views\\shop\\cart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\views\\donhang\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\views\\donhang\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\views\\donhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\views\\donhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\controllers\\admin\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\controllers\\admin\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\models\\chitietdon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\models\\chitietdon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\models\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\models\\donhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 246,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\LichHen\\Create.cshtml",
+              "RelativeDocumentMoniker": "PetCare\\Views\\LichHen\\Create.cshtml",
+              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\LichHen\\Create.cshtml",
+              "RelativeToolTip": "PetCare\\Views\\LichHen\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-01T05:02:55.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20241201050209_FixDonHang.cs",
+              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Migrations\\20241201050209_FixDonHang.cs",
+              "RelativeDocumentMoniker": "PetCare\\Migrations\\20241201050209_FixDonHang.cs",
+              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Migrations\\20241201050209_FixDonHang.cs",
+              "RelativeToolTip": "PetCare\\Migrations\\20241201050209_FixDonHang.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T05:02:10.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CheckOut.cshtml",
+              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\Shop\\CheckOut.cshtml",
+              "RelativeDocumentMoniker": "PetCare\\Views\\Shop\\CheckOut.cshtml",
+              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\Shop\\CheckOut.cshtml",
+              "RelativeToolTip": "PetCare\\Views\\Shop\\CheckOut.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-01T04:56:51.818Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LichHenController.cs",
+              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Controllers\\Admin\\LichHenController.cs",
+              "RelativeDocumentMoniker": "PetCare\\Controllers\\Admin\\LichHenController.cs",
+              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Controllers\\Admin\\LichHenController.cs",
+              "RelativeToolTip": "PetCare\\Controllers\\Admin\\LichHenController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwBQAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T04:31:30.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "PetCare\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "PetCare\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAA5wCkAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T04:08:14.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_LayoutStore.cshtml",
+              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\Shared\\_LayoutStore.cshtml",
+              "RelativeDocumentMoniker": "PetCare\\Views\\Shared\\_LayoutStore.cshtml",
+              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\Shared\\_LayoutStore.cshtml",
+              "RelativeToolTip": "PetCare\\Views\\Shared\\_LayoutStore.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACcAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-01T04:05:18.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Cart.cshtml",
+              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\Shop\\Cart.cshtml",
+              "RelativeDocumentMoniker": "PetCare\\Views\\Shop\\Cart.cshtml",
+              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\Shop\\Cart.cshtml",
+              "RelativeToolTip": "PetCare\\Views\\Shop\\Cart.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAADMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-01T03:59:39.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\DonHang\\Details.cshtml",
+              "RelativeDocumentMoniker": "PetCare\\Views\\DonHang\\Details.cshtml",
+              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\DonHang\\Details.cshtml",
+              "RelativeToolTip": "PetCare\\Views\\DonHang\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-01T03:42:57.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ShopController.cs",
+              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Controllers\\PetShop\\ShopController.cs",
+              "RelativeDocumentMoniker": "PetCare\\Controllers\\PetShop\\ShopController.cs",
+              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Controllers\\PetShop\\ShopController.cs",
+              "RelativeToolTip": "PetCare\\Controllers\\PetShop\\ShopController.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAcwGEAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T03:30:38.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "VMChitietdh.cs",
+              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Models\\VMChitietdh.cs",
+              "RelativeDocumentMoniker": "PetCare\\Models\\VMChitietdh.cs",
+              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Models\\VMChitietdh.cs",
+              "RelativeToolTip": "PetCare\\Models\\VMChitietdh.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T03:19:49.971Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\DonHang\\Index.cshtml",
+              "RelativeDocumentMoniker": "PetCare\\Views\\DonHang\\Index.cshtml",
+              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\DonHang\\Index.cshtml",
+              "RelativeToolTip": "PetCare\\Views\\DonHang\\Index.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-30T22:04:29.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DonHangController.cs",
+              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Controllers\\Admin\\DonHangController.cs",
+              "RelativeDocumentMoniker": "PetCare\\Controllers\\Admin\\DonHangController.cs",
+              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Controllers\\Admin\\DonHangController.cs",
+              "RelativeToolTip": "PetCare\\Controllers\\Admin\\DonHangController.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAcwCEAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T22:04:17.92Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Donhang.cs",
+              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Models\\Donhang.cs",
+              "RelativeDocumentMoniker": "PetCare\\Models\\Donhang.cs",
+              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Models\\Donhang.cs",
+              "RelativeToolTip": "PetCare\\Models\\Donhang.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T21:04:09.03Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Chitietdon.cs",
+              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Models\\Chitietdon.cs",
+              "RelativeDocumentMoniker": "PetCare\\Models\\Chitietdon.cs",
+              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Models\\Chitietdon.cs",
+              "RelativeToolTip": "PetCare\\Models\\Chitietdon.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T03:30:29.662Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

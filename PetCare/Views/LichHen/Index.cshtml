@@ -1,0 +1,49 @@
+﻿@model List<Lichhen>
+@{
+    Layout = "Admin/_LayoutAdmin";
+}
+
+<h2 class="text-center mb-5">Quản Lý Lịch Hẹn</h2>
+
+<div class="row mb-5">
+    <div class="col">
+        <a class="btn btn-primary" asp-asp-controller="LichHen" asp-action="Create">Thêm mới</a>
+    </div>
+    <div class="col">
+    </div>
+</div>
+
+<!-- Công việc thêm: Thêm điều kiện kiểm tra dữ liệu nếu như trống thì in dòng "Không có dữ liệu" -->
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Họ & Tên Khách Hàng</th>
+            <th>Số điện thoại Khách Hàng</th>
+            <th>Ngày Hẹn</th>
+            <th>Dịch Vụ</th>
+            <th>Trạng Thái</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var lichhen in Model)
+        {
+            <tr>
+                <td>@lichhen.id_lich</td>
+                <td>@lichhen.ten_kh</td>
+                <td>@lichhen.sdt_kh</td>
+                <td>@lichhen.ngay_hen</td>
+                <td>@lichhen.DichVu</td>
+                <td>@lichhen.trang_thai</td>
+                <td style="white-space: nowrap">
+                    <a class="btn btn-primary btn-sm" asp-controller="LichHen" asp-action="Edit"
+                       asp-route-id="@lichhen.id_lich">Edit</a>
+                    <a class="btn btn-danger btn-sm" asp-controller="LichHen" asp-action="Delete"
+                       asp-route-id="@lichhen.id_lich" onclick="return confirm('Chắc chắn xóa sản phẩm này?')">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

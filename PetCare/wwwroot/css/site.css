@@ -1,0 +1,55 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #4a4a4a;
+}
+
+.hero {
+    background-color: #f8f9fa;
+}
+
+.card {
+    transition: transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+.btn-primary {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+    .btn-primary:hover {
+        background-color: #218838;
+        border-color: #1e7e34;
+    }
+
+.btn-outline-primary {
+    color: #28a745;
+    border-color: #28a745;
+}
+
+    .btn-outline-primary:hover {
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+
+footer {
+    background-color: #f8f9fa;
+    color: #6c757d;
+}
+
+    footer a {
+        color: #6c757d;
+        text-decoration: none;
+    }
+
+        footer a:hover {
+            color: #4a4a4a;
+        }

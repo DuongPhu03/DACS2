@@ -1,0 +1,87 @@
+﻿@model List<PetCare.Models.Sanpham>
+@{
+    ViewData["Title"] = "Home";
+    Layout = "_LayoutStore";
+}
+
+<div class="container-fluid p-0">
+    <div class="hero bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="display-4">Pets Food In The Store</h1>
+                    <p class="lead">Find the best quality food for your beloved pets.</p>
+                    <a href="/product" class="btn btn-primary btn-lg">Shop Now</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="/placeholder.svg?height=400&width=600" alt="Pet Food" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Our Categories</h2>
+        <div class="row">
+            @for (int i = 0; i < 4; i++)
+            {
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="/placeholder.svg?height=200&width=200" class="card-img-top" alt="Category">
+                        <div class="card-body">
+                            <h5 class="card-title">Category Name</h5>
+                            <a href="/category" class="btn btn-outline-primary">View Products</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Sản phẩm nổi bật</h2>
+        <div class="row">
+            @foreach (var sp in Model)
+            {
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="assets/sanphams/@sp.hinhanh?height=200&width=200" class="card-img-top" alt="Product">
+                        <div class="card-body">
+                            <h5 class="card-title">@sp.ten_sanpham</h5>
+                            <p class="card-text">@sp.thanhtien.ToString("N0")</p>
+                            <form method="post">
+                                <a asp-controller="Shop" asp-action="AddToCart" asp-route-productid="@sp.id_sanpham" class="btn btn-primary">Thêm</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="/placeholder.svg?height=300&width=600" class="card-img-top" alt="Special Offer">
+                    <div class="card-body">
+                        <h5 class="card-title">Special Offer</h5>
+                        <p class="card-text">Get 20% off on all dog food!</p>
+                        <a href="#" class="btn btn-primary">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <img src="/placeholder.svg?height=300&width=600" class="card-img-top" alt="New Arrivals">
+                    <div class="card-body">
+                        <h5 class="card-title">New Arrivals</h5>
+                        <p class="card-text">Check out our latest pet accessories!</p>
+                        <a href="#" class="btn btn-primary">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

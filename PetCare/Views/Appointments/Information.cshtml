@@ -1,0 +1,49 @@
+﻿@model LichhenDto
+@{
+
+}
+
+<div class="card bg-white border-dark rounded">
+    <div class="card-body col-12">
+        <form method="POST" enctype="multipart/form-data">
+        <div class="row mb-3">
+            <label class="col col-form-label">Tên</label>
+            <div class="col">
+                <input class="form-control" asp-for="ten_kh" />
+                <span asp-validation-for="ten_kh" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col col-form-label">Số điện thoại</label>
+            <div class="col">
+                <input class="form-control" asp-for="sdt_kh" />
+                <span asp-validation-for="sdt_kh" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col col-form-label">Ghi chú</label>
+            <div class="col">
+                <input class="form-control" asp-for="ghi_chu" />
+                <span asp-validation-for="ghi_chu" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label class="col col-form-label">Ngày hẹn</label>
+            <div class="col">
+                <input class="form-control" type="datetime-local" asp-for="ngay_hen" />
+                <span asp-validation-for="ngay_hen" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <label class="col col-form-label">Dịch Vụ</label>
+            <div class="col">
+                    <select class="form-control" asp-items="ViewBag.DichVuOption" name="DichVu"></select>
+            </div>
+        </div>
+
+            <button type="submit" class="btn btn-primary">Lưu</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,215 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = PetCare
+build_property.RootNamespace = PetCare
+build_property.ProjectDir = D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Appointments/Information.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRzXEluZm9ybWF0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/DichVuCN/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGljaFZ1Q05cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/DichVuNgay/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGljaFZ1TmdheVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/DichVu/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGljaFZ1XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/DichVu/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGljaFZ1XERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/DichVu/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGljaFZ1XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/DichVu/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGljaFZ1XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/DonHang/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9uSGFuZ1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/DonHang/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9uSGFuZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/KhachHang/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hhY2hIYW5nXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/KhachHang/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hhY2hIYW5nXERldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/KhachHang/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hhY2hIYW5nXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/KhachHang/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hhY2hIYW5nXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Kho/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hvXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Kho/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hvXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Kho/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS2hvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/LichHen/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGljaEhlblxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/LichHen/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGljaEhlblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/LoaiSP/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9haVNQXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/LoaiSP/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9haVNQXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/LoaiSP/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9haVNQXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/NhanVien/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/NhanVien/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/NhanVien/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmhhblZpZW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/SanPham/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FuUGhhbVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/SanPham/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FuUGhhbVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/SanPham/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FuUGhhbVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Shop/Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxDYXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Shop/Category.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxDYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Shop/CheckOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxDaGVja091dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Shop/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Shop/Product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/ThuCung/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGh1Q3VuZ1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/ThuCung/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGh1Q3VuZ1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Shared/Admin/_LayoutAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkbWluXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-2eh8i725lo
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-g5d2wu8lzs
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Shared/_LayoutAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBY2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-xx3qs8kgr6
+
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Shared/_LayoutStore.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRTdG9yZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-bjpbzrwdij
