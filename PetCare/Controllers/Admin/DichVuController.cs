@@ -35,7 +35,7 @@ namespace PetCare.Controllers.Admin
             var dichvu = new DichVu
             {
                 ten_dichvu = dichvuDto.ten_dichvu,
-                dang_dichvu = dichvuDto.dang_dichvu
+                loai_dichvu = dichvuDto.loai_dichvu
             };
 
             context.DichVus.Add(dichvu);
@@ -56,7 +56,7 @@ namespace PetCare.Controllers.Admin
             var dichvuDto = new DichVuDto
             {
                 ten_dichvu = dichvu.ten_dichvu,
-                dang_dichvu = dichvu.dang_dichvu
+                loai_dichvu = dichvu.loai_dichvu
             };
 
             ViewData["dichvuId"] = dichvu.id_dichvu;
@@ -79,7 +79,7 @@ namespace PetCare.Controllers.Admin
             }
 
             dichvu.ten_dichvu = dichvuDto.ten_dichvu;
-            dichvu.dang_dichvu = dichvuDto.dang_dichvu;
+            dichvu.loai_dichvu = dichvuDto.loai_dichvu;
 
             context.SaveChanges();
             return RedirectToAction("Index");

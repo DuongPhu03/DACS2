@@ -6,27 +6,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PetCare.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialStart : Migration
+    public partial class InitialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "Chitietdongs",
-                columns: table => new
-                {
-                    id_chitietdh = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    id_dh = table.Column<int>(type: "int", nullable: false),
-                    id_sp = table.Column<int>(type: "int", nullable: false),
-                    soluong = table.Column<int>(type: "int", nullable: false),
-                    ghichu = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Chitietdongs", x => x.id_chitietdh);
-                });
-
             migrationBuilder.CreateTable(
                 name: "Chitietlichs",
                 columns: table => new
@@ -79,29 +63,11 @@ namespace PetCare.Migrations
                     id_dichvu = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ten_dichvu = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
-                    dang_dichvu = table.Column<int>(type: "int", nullable: false)
+                    loai_dichvu = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_DichVus", x => x.id_dichvu);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Donhangs",
-                columns: table => new
-                {
-                    id_dh = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ma_dh = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    id_nv = table.Column<int>(type: "int", nullable: false),
-                    id_kh = table.Column<int>(type: "int", nullable: false),
-                    tong_tien = table.Column<decimal>(type: "decimal(16,2)", precision: 16, scale: 2, nullable: false),
-                    trang_thai = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    CreateAt = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Donhangs", x => x.id_dh);
                 });
 
             migrationBuilder.CreateTable(
@@ -113,35 +79,11 @@ namespace PetCare.Migrations
                     ten_kh = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     sdt_kh = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     diachi_kh = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    matkhau = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    matkhau = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Khachhangs", x => x.id_kh);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Lichhens",
-                columns: table => new
-                {
-                    id_lich = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    nhanvien_tiepnhan = table.Column<int>(type: "int", nullable: true),
-                    khachhang = table.Column<int>(type: "int", nullable: true),
-                    ten_kh = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    sdt_kh = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    thu_cung = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
-                    can_nang = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
-                    ngay_hen = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DichVu = table.Column<int>(type: "int", nullable: false),
-                    ghi_chu = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
-                    tong_tien = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    CreateAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    trang_thai = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Lichhens", x => x.id_lich);
                 });
 
             migrationBuilder.CreateTable(
@@ -176,6 +118,32 @@ namespace PetCare.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Donhangs",
+                columns: table => new
+                {
+                    id_dh = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ma_dh = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    id_nv = table.Column<int>(type: "int", nullable: false),
+                    id_kh = table.Column<int>(type: "int", nullable: false),
+                    diachi_giao = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ghi_chu = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    tong_tien = table.Column<decimal>(type: "decimal(16,2)", precision: 16, scale: 2, nullable: false),
+                    trang_thai = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    CreateAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Donhangs", x => x.id_dh);
+                    table.ForeignKey(
+                        name: "FK_Donhangs_Khachhangs_id_kh",
+                        column: x => x.id_kh,
+                        principalTable: "Khachhangs",
+                        principalColumn: "id_kh",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Thucungs",
                 columns: table => new
                 {
@@ -184,12 +152,18 @@ namespace PetCare.Migrations
                     ten_pet = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     ngaysinh_pet = table.Column<DateTime>(type: "datetime2", nullable: false),
                     giong_pet = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    cannang_pet = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    cannang_pet = table.Column<float>(type: "real", maxLength: 100, nullable: false),
                     id_kh = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Thucungs", x => x.id_pet);
+                    table.ForeignKey(
+                        name: "FK_Thucungs_Khachhangs_id_kh",
+                        column: x => x.id_kh,
+                        principalTable: "Khachhangs",
+                        principalColumn: "id_kh",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -217,6 +191,70 @@ namespace PetCare.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Chitietdons",
+                columns: table => new
+                {
+                    id_chitietdh = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    id_dh = table.Column<int>(type: "int", nullable: false),
+                    id_sp = table.Column<int>(type: "int", nullable: false),
+                    soluong = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Chitietdons", x => x.id_chitietdh);
+                    table.ForeignKey(
+                        name: "FK_Chitietdons_Donhangs_id_dh",
+                        column: x => x.id_dh,
+                        principalTable: "Donhangs",
+                        principalColumn: "id_dh",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Lichhens",
+                columns: table => new
+                {
+                    id_lichhen = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    id_kh = table.Column<int>(type: "int", nullable: false),
+                    id_tc = table.Column<int>(type: "int", nullable: false),
+                    id_dichvu = table.Column<int>(type: "int", nullable: false),
+                    ngay_hen = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ghi_chu = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    trang_thai = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    CreateAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DichVuid_dichvu = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Lichhens", x => x.id_lichhen);
+                    table.ForeignKey(
+                        name: "FK_Lichhens_DichVus_DichVuid_dichvu",
+                        column: x => x.DichVuid_dichvu,
+                        principalTable: "DichVus",
+                        principalColumn: "id_dichvu");
+                    table.ForeignKey(
+                        name: "FK_Lichhens_DichVus_id_dichvu",
+                        column: x => x.id_dichvu,
+                        principalTable: "DichVus",
+                        principalColumn: "id_dichvu",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Lichhens_Khachhangs_id_kh",
+                        column: x => x.id_kh,
+                        principalTable: "Khachhangs",
+                        principalColumn: "id_kh",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Lichhens_Thucungs_id_tc",
+                        column: x => x.id_tc,
+                        principalTable: "Thucungs",
+                        principalColumn: "id_pet",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Khohangs",
                 columns: table => new
                 {
@@ -238,21 +276,56 @@ namespace PetCare.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Chitietdons_id_dh",
+                table: "Chitietdons",
+                column: "id_dh");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Donhangs_id_kh",
+                table: "Donhangs",
+                column: "id_kh");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Khohangs_id_sp",
                 table: "Khohangs",
                 column: "id_sp");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Lichhens_DichVuid_dichvu",
+                table: "Lichhens",
+                column: "DichVuid_dichvu");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Lichhens_id_dichvu",
+                table: "Lichhens",
+                column: "id_dichvu");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Lichhens_id_kh",
+                table: "Lichhens",
+                column: "id_kh");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Lichhens_id_tc",
+                table: "Lichhens",
+                column: "id_tc");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Sanphams_id_loaisp",
                 table: "Sanphams",
                 column: "id_loaisp");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Thucungs_id_kh",
+                table: "Thucungs",
+                column: "id_kh");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Chitietdongs");
+                name: "Chitietdons");
 
             migrationBuilder.DropTable(
                 name: "Chitietlichs");
@@ -264,15 +337,6 @@ namespace PetCare.Migrations
                 name: "DichVu_Ngays");
 
             migrationBuilder.DropTable(
-                name: "DichVus");
-
-            migrationBuilder.DropTable(
-                name: "Donhangs");
-
-            migrationBuilder.DropTable(
-                name: "Khachhangs");
-
-            migrationBuilder.DropTable(
                 name: "Khohangs");
 
             migrationBuilder.DropTable(
@@ -282,13 +346,22 @@ namespace PetCare.Migrations
                 name: "Nhanviens");
 
             migrationBuilder.DropTable(
-                name: "Thucungs");
+                name: "Donhangs");
 
             migrationBuilder.DropTable(
                 name: "Sanphams");
 
             migrationBuilder.DropTable(
+                name: "DichVus");
+
+            migrationBuilder.DropTable(
+                name: "Thucungs");
+
+            migrationBuilder.DropTable(
                 name: "Sanpham_loais");
+
+            migrationBuilder.DropTable(
+                name: "Khachhangs");
         }
     }
 }

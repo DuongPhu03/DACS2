@@ -1,70 +1,43 @@
-﻿@{
+﻿@model VMHienThiShop
+@using X.PagedList.Mvc.Core
+@{
     ViewData["Title"] = "Category Products";
     Layout = "_LayoutStore";
 }
 
 <div class="container my-5">
-    <h1 class="mb-4">Category Name</h1>
+    <h2 class="text-center mb-4">Our Categories</h2>
     <div class="row">
-        <div class="col-md-3">
-            <h4>Filter</h4>
-            <div class="mb-3">
-                <h5>Price Range</h5>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="price1">
-                    <label class="form-check-label" for="price1">$0 - $25</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="price2">
-                    <label class="form-check-label" for="price2">$25 - $50</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="price3">
-                    <label class="form-check-label" for="price3">$50+</label>
+        @foreach (var loaisp in Model.loaisps)
+        {
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="~/assets/loaisp/@loaisp.hinh_anh" class="card-img-top" alt="@loaisp.name">
+                    <div class="card-body row">
+                        <h5 class="card-title col mt-2">@loaisp.name</h5>
+                        <a asp-controller="Shop" asp-action="Category" asp-route-id_loai="@loaisp.id" class="btn btn-primary rounded-pill col">Xem sản phẩm</a>
+                    </div>
                 </div>
             </div>
-            <div class="mb-3">
-                <h5>Brand</h5>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="brand1">
-                    <label class="form-check-label" for="brand1">Brand 1</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="brand2">
-                    <label class="form-check-label" for="brand2">Brand 2</label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="brand3">
-                    <label class="form-check-label" for="brand3">Brand 3</label>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-9">
-            <div class="row">
-                @for (int i = 0; i < 12; i++)
-                {
-                    <div class="col-md-4 mb-4">
-                        <div class="card">
-                            <img src="/placeholder.svg?height=200&width=200" class="card-img-top" alt="Product">
-                            <div class="card-body">
-                                <h5 class="card-title">Product Name</h5>
-                                <p class="card-text">$19.99</p>
-                                <a href="/product" class="btn btn-primary">View Details</a>
-                            </div>
+        }
+    </div>
+
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Sản phẩm nổi bật</h2>
+        <div class="row">
+            @foreach (var sp in Model.sanphams)
+            {
+                <div class="col-md-3 mb-4">
+                    <div class="card">
+                        <img src="~/assets/sanphams/@sp.hinhanh" class="card-img-top" alt="@sp.ten_sanpham">
+                        <div class="card-body">
+                            <h5 class="card-title">@sp.ten_sanpham</h5>
+                            <p class="card-text">@sp.thanhtien.ToString("N0") + " VND"</p>
+                            <a asp-controller="Shop" asp-action="AddToCart" asp-route-productid="@sp.id_sanpham" class="btn btn-primary rounded-pill">Thêm</a>
                         </div>
                     </div>
-                }
-            </div>
-            <nav aria-label="Page navigation">
-                <ul class="pagination justify-content-center">
-                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                </ul>
-            </nav>
+                </div>
+            }
         </div>
     </div>
 </div>
-

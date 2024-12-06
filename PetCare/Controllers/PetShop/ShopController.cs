@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Azure;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using PetCare.Models;
 using PetCare.Models.Authentication;
 using PetCare.Services;
+using X.PagedList.Extensions;
 
 namespace PetCare.Controllers.PetShop
 {
@@ -27,12 +29,63 @@ namespace PetCare.Controllers.PetShop
             ViewData["UserId"] = user?.id_kh;
             ViewData["UserName"] = user?.ten_kh;
             var sanpham = context.Sanphams.ToList();
-            return View(sanpham);
+            var loaisanpham = context.Sanpham_loais.ToList();
+            var hienthi = new VMHienThiShop
+            {
+                sanphams = sanpham,
+                loaisps = loaisanpham
+            };
+            return View(hienthi);
         }
-        public IActionResult Category()
+
+
+        [HttpGet]
+        [Route("/Category")]
+        public async Task<IActionResult> Category()
+        {
+            // Fetch category and products
+            var category = context.Sanpham_loais.ToList();
+            var products = context.Sanphams.ToList();
+
+            // Create ViewModel to pass data
+            var viewModel = new VMHienThiShop
+            {
+                loaisps = category,
+                sanphams = products 
+            };
+
+            return View(viewModel);
+        }
+
+        [HttpGet]
+        [Route("/Category/{id_loai:int}")]
+        public async Task<IActionResult> Category(int id_loai)
         {
 
-            return View();
+            int? userId = HttpContext.Session.GetInt32("Username");
+            if (userId == null)
+            {
+                HttpContext.Session.Clear();
+            }
+            var user = await context.Khachhangs.FindAsync(userId);
+
+            ViewData["UserId"] = user?.id_kh;
+            ViewData["UserName"] = user?.ten_kh;
+
+            var sanpham = context.Sanphams.Where(sp => sp.sanpham_loai.id == id_loai).ToList();
+            if (sanpham == null)
+            {
+                return NotFound();
+            }
+            var loaisanpham = context.Sanpham_loais.ToList();
+
+            var hienthi = new VMHienThiShop
+            {
+                sanphams = sanpham,
+                loaisps = loaisanpham
+            };
+
+            return View(hienthi);
         }
 
         public IActionResult Product()
@@ -40,6 +93,7 @@ namespace PetCare.Controllers.PetShop
 
             return View();
         }
+
         [HttpGet]
         [Route("/Checkout")]
         public async Task<IActionResult> CheckOut(int id)
@@ -59,6 +113,8 @@ namespace PetCare.Controllers.PetShop
                 HttpContext.Session.Clear();
             }
             var user = await context.Khachhangs.FindAsync(userId);
+            ViewData["UserId"] = user?.id_kh;
+            ViewData["UserName"] = user?.ten_kh;
 
             // Populate the ViewModel
             var model = new VMThongtinthanhtoan
@@ -78,7 +134,7 @@ namespace PetCare.Controllers.PetShop
 
         [HttpPost]
         [Route("/Checkout")]
-        public IActionResult CheckOut(VMThongtinthanhtoan vm)
+        public async Task<IActionResult> CheckOut(VMThongtinthanhtoan vm)
         {
             var cart = GetCartItems();
             if (cart == null || !cart.Any())
@@ -91,11 +147,23 @@ namespace PetCare.Controllers.PetShop
             decimal totalPrice = cart.Sum(item => item.Sanpham.thanhtien * item.soluong);
 
             int? userId = HttpContext.Session.GetInt32("Username");
+            var user = await context.Khachhangs.FindAsync(userId);
+
+            foreach (var item in cart)
+            {
+                var product = await context.Sanphams.FirstOrDefaultAsync(sp => sp.id_sanpham == item.Sanpham.id_sanpham);
+
+                if (product.soluong < item.soluong)
+                {
+                    TempData["Error"] = $"Not enough stock for product {product.ten_sanpham}. Available: {product.soluong}, Required: {item.soluong}.";
+                    return RedirectToAction("Cart");
+                }
+            }
             // Create a new order
             var order = new Donhang
             {
                 ma_dh = GenerateOrderCode(),
-                id_kh = (int)idKhachHang,
+                id_kh = user.id_kh,
                 diachi_giao = vm.diachi_giao,
                 ghi_chu = vm.ghi_chu,
                 tong_tien = totalPrice,
@@ -103,11 +171,16 @@ namespace PetCare.Controllers.PetShop
                 CreateAt = DateTime.Now
             };
             context.Donhangs.Add(order);
-            context.SaveChanges();
+            await context.SaveChangesAsync();
 
             // Add order details
             foreach (var item in cart)
             {
+                var product = await context.Sanphams.FirstOrDefaultAsync(sp => sp.id_sanpham == item.Sanpham.id_sanpham);
+
+                // Subtract stock
+                product.soluong -= item.soluong;
+
                 var orderDetail = new Chitietdon
                 {
                     id_dh = order.id_dh,
@@ -116,7 +189,7 @@ namespace PetCare.Controllers.PetShop
                 };
                 context.Chitietdons.Add(orderDetail);
             }
-            context.SaveChanges();
+            await context.SaveChangesAsync();
 
             // Clear cart
             ClearCart();
@@ -195,6 +268,10 @@ namespace PetCare.Controllers.PetShop
         [Route("/Cart", Name = "Cart")]
         public IActionResult Cart()
         {
+            int? userId = HttpContext.Session.GetInt32("Username");
+            var user = context.Khachhangs.Find(userId);
+            ViewData["UserId"] = user?.id_kh;
+            ViewData["UserName"] = user?.ten_kh;
             return View(GetCartItems());
         }
 

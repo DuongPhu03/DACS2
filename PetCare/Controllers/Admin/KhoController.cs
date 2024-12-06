@@ -60,6 +60,9 @@ namespace PetCare.Controllers.Admin
                 CreatedAt = DateTime.Now,
             };
 
+            // Update the total quantity in Sanpham
+            Sanpham.soluong += khoHang.soluong;
+
             context.Khohangs.Add(khoHang);
             await context.SaveChangesAsync();
 
@@ -89,22 +92,35 @@ namespace PetCare.Controllers.Admin
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(VMKhoSanPham model)
+        public async Task<IActionResult> Edit(int idKho, int idSP, VMKhoSanPham model)
         {
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
 
+            // Fetch the Khohang record by idKho and idSP
             var khoHang = await context.Khohangs
-                .FirstOrDefaultAsync(k => k.id_kho == model.id_kho && k.id_sp == model.id_sp);
+                .FirstOrDefaultAsync(k => k.id_kho == idKho && k.id_sp == idSP);
 
             if (khoHang == null)
             {
                 return NotFound();
             }
 
-            // Update fields
+            // Fetch the associated Sanpham
+            var sanPham = await context.Sanphams.FirstOrDefaultAsync(sp => sp.id_sanpham == idSP);
+            if (sanPham == null)
+            {
+                ModelState.AddModelError("", "Sản phẩm không tồn tại.");
+                return View(model);
+            }
+
+            // Update the Sanpham quantity based on the change
+            var difference = model.soluong - khoHang.soluong;
+            sanPham.soluong += difference;
+
+            // Update Khohang quantity
             khoHang.soluong = model.soluong;
 
             // Save changes
@@ -112,6 +128,7 @@ namespace PetCare.Controllers.Admin
 
             return RedirectToAction(nameof(Index));
         }
+
 
         public IActionResult Delete(int id)
         {

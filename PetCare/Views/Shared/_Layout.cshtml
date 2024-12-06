@@ -25,16 +25,13 @@
                     <!-- Center-aligned Navigation Links -->
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link btn btn-success" asp-area="" asp-controller="Home" asp-action="Appointment">Book A Date</a>
+                            <a class="nav-link" asp-area="" asp-controller="Shop" asp-action="Index">Cửa Hàng Pet</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Shop" asp-action="Index">PetShop</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="AboutUs">Về Chúng Tôi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="AboutUs">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Services">Services</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Services">Dịch Vụ Cung Cấp</a>
                         </li>
                     </ul>
 
@@ -44,20 +41,20 @@
                         {
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Welcome, @ViewData["UserName"]
+                                    Xin chào, @ViewData["UserName"]
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Profile</a></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Orders">Orders</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Profile">Tài khoản</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Orders">Đơn hàng</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Logout">Logout</a></li>
+                                    <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="Logout">Đăng xuất</a></li>
                                 </ul>
                             </li>
                         }
                         else
                         {
                             <li class="nav-item">
-                                <a class="nav-link btn btn-primary text-white" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+                                <a class="nav-link btn btn-primary text-white" asp-area="" asp-controller="Account" asp-action="Login">Đăng nhập</a>
                             </li>
                         }
                     </ul>
@@ -66,16 +63,16 @@
         </nav>
     </header>
 
-    <div class="container">
+    <div class="container mb-5 mt-3">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
     <!-- Footer -->
-    <footer class="border-top footer text-muted">
+    <footer class="bg-light mt-5 py-3 position-absolute bottom-0">
         <div class="container">
-            &copy; @DateTime.Now.Year - PetSS - All rights reserved.
+            &copy; @DateTime.Now.Year - PetSS - Đã đánh chủ quyền.
         </div>
     </footer>
     <!-- Footer -->

@@ -3,6 +3,7 @@
     public class VMChitietdh
     {
         public int id_dh {  get; set; }
+        public string ten_nv { get; set; } = "";
         public string ten_kh { get; set; } = "";
         public string sdt_kh { get; set; } = "";
         public string diachi_giao { get; set; } = "";

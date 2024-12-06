@@ -603,6 +603,8 @@ D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\bin\Debug\net8.0
 D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\bin\Debug\net8.0\System.Security.Permissions.dll
 D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\bin\Debug\net8.0\X.PagedList.dll
+D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll
 D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\bin\Debug\net8.0\af\Humanizer.resources.dll
 D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\bin\Debug\net8.0\ar\Humanizer.resources.dll
 D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\bin\Debug\net8.0\az\Humanizer.resources.dll
@@ -758,9 +760,11 @@ D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\obj\Debug\net8.0
 D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\obj\Debug\net8.0\PetCare.AssemblyInfoInputs.cache
 D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\obj\Debug\net8.0\PetCare.AssemblyInfo.cs
 D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\obj\Debug\net8.0\PetCare.csproj.CoreCompileInputs.cache
+D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\obj\Debug\net8.0\PetCare.MvcApplicationPartsAssemblyInfo.cs
 D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\obj\Debug\net8.0\PetCare.MvcApplicationPartsAssemblyInfo.cache
 D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\obj\Debug\net8.0\PetCare.RazorAssemblyInfo.cache
 D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\obj\Debug\net8.0\PetCare.RazorAssemblyInfo.cs
+D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\obj\Debug\net8.0\PetCare.sourcelink.json
 D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\obj\Debug\net8.0\staticwebassets.build.json
 D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\obj\Debug\net8.0\staticwebassets.development.json
 D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare\obj\Debug\net8.0\staticwebassets\msbuild.PetCare.Microsoft.AspNetCore.StaticWebAssets.props

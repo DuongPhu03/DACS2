@@ -9,6 +9,7 @@ namespace PetCare.Models
         public int id_dichvu { get; set; }
         [MaxLength(100)]
         public string? ten_dichvu { get; set; }
-        public int dang_dichvu { get; set; }
+        public int loai_dichvu { get; set; }
+        public ICollection<Lichhen> Lichhens { get; set; } = new List<Lichhen>();
     }
 }

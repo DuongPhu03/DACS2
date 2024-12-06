@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using petCare.Models;
 using PetCare.Models;
+using PetCare.Models.Authentication;
 using PetCare.Services;
 
 namespace PetCare.Controllers
@@ -15,43 +18,66 @@ namespace PetCare.Controllers
             this.context = context;
             this.environment = environment;
         }
-        public IActionResult Information()
-        {
-            ViewBag.DichVuOption = new List<SelectListItem>
-            {
-                new SelectListItem { Value = "", Text = "-- Chọn Dịch Vụ --" },
-                new SelectListItem { Value = "1", Text = "Cắt Tỉa Tóc" },
-                new SelectListItem { Value = "2", Text = "Cạo Lông" },
-            };
-            return View();
-        }
 
-        /*[HttpPost]
-        public ActionResult Create(DichVu_CanNangDto dv_cndto)
+        [HttpGet]
+        [Authentication]
+        [Route("/Information", Name = "Information")]
+        public IActionResult Information(int? id_pet)
         {
-            if (!ModelState.IsValid)
+            var user = HttpContext.Session.GetInt32("Username");
+            if (user == null)
             {
-                ViewData["IDDV"] = dv_cndto.id_dichvu; // Preserve IDKH in case of errors
-                return View(dv_cndto);
+                return RedirectToAction("Login", "Account");
             }
 
-            var dichvu_cns = new DichVu_CanNang
+            var khachhang = context.Khachhangs.Find(user);
+            if (khachhang == null)
             {
-                id_dichvu = dv_cndto.id_dichvu,
-                min_can_nang = dv_cndto.min_can_nang,
-                max_can_nang = dv_cndto.max_can_nang,
-                gia_thanh = dv_cndto.gia_thanh
+                return NotFound("Khách hàng không tồn tại.");
+            }
+
+            var thongtin = new VMChitietLichHen
+            {
+                id_kh = khachhang.id_kh,
+                ten_kh = khachhang.ten_kh,
+                sdt_kh = khachhang.sdt_kh
             };
+            id_pet = id_pet ?? 0;
 
-            context.DichVu_CanNangs.Add(dichvu_cns);
-            context.SaveChanges();
+            var thucung = context.Thucungs.Where(tc => tc.id_kh == khachhang.id_kh).ToList();
 
-            return RedirectToAction("Detail", "DichVu", new { id = dichvu_cns.id_dichvu });
-        }*/
+            if (id_pet != null)
+            {
+                var selectedPet = thucung.FirstOrDefault(tc => tc.id_pet == id_pet);
+                if (selectedPet != null)
+                {
+                    thongtin.ten_tc = selectedPet.ten_pet;
+                    thongtin.giong_tc = selectedPet.giong_pet;
+                    thongtin.can_nang = selectedPet.cannang_pet;
+                    thongtin.id_tc = selectedPet.id_pet;
+                }
+            }
+            thucung.Insert(0, new Thucung { id_pet = 0, ten_pet = "--- Chọn Pet ---" });
+            ViewBag.ThuCungs = new SelectList(thucung, "id_pet", "ten_pet", id_pet);
+            ViewBag.DichVuOption = context.DichVus.ToList();
+
+            ViewData["PetId"] = id_pet;
+            ViewData["UserId"] = khachhang.id_kh;
+            ViewData["UserName"] = khachhang.ten_kh;
+
+            return View(thongtin);
+        }
 
         [HttpPost]
-        public ActionResult Information(LichhenDto lichhenDto)
+        [Route("/Information", Name = "Information")]
+        public IActionResult Information(int id_tc, VMChitietLichHen lichhenDto)
         {
+            ViewBag.ThuCungs = new SelectList(
+                context.Thucungs.Where(tc => tc.id_kh == lichhenDto.id_kh).ToList(),
+                "id_pet",
+                "ten_pet",
+                lichhenDto.id_tc);
+
             if (!ModelState.IsValid)
             {
                 return View(lichhenDto);
@@ -59,10 +85,12 @@ namespace PetCare.Controllers
 
             var lichhen = new Lichhen
             {
-                ten_kh = lichhenDto.ten_kh,
-                sdt_kh = lichhenDto.sdt_kh,
+                id_kh = lichhenDto.id_kh,
+                id_tc = id_tc, // Use the id_tc from the hidden field
+                id_nv = null,
                 ngay_hen = lichhenDto.ngay_hen,
-                DichVu = lichhenDto.DichVu,
+                id_dichvu = lichhenDto.id_dichvu,
+                ghi_chu = lichhenDto.ghi_chu,
                 CreateAt = DateTime.Today.ToLocalTime(),
                 trang_thai = "Đang chờ xác nhận"
             };

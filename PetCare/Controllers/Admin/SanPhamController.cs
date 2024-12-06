@@ -1,5 +1,6 @@
 ﻿using Humanizer;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using PetCare.Models;
 using PetCare.Services;
@@ -15,10 +16,21 @@ namespace PetCare.Controllers.Admin
             this.context = context;
             this.environment = environment;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? LoaiId)
         {
+            // If LoaiId is null, default it to 0 (show all products)
+            LoaiId = LoaiId ?? 0;
+
+            // Fetch product categories
+            var SPLoai = context.Sanpham_loais.ToList();
+            SPLoai.Insert(0, new Sanpham_Loai { id = 0, name = "--- Chọn loại sản phẩm ---" });
+
+            // Pass the category list to the view for the dropdown
+            ViewBag.LoaiId = new SelectList(SPLoai, "id", "name", LoaiId);
+
+            // Fetch products and include category data
             var SPData = await context.Sanphams
-                .Include(sp => sp.sanpham_loai)
+                .Include(sp => sp.sanpham_loai) // Include product categories
                 .Select(sp => new VMSanPham
                 {
                     id_sanpham = sp.id_sanpham,
@@ -27,11 +39,18 @@ namespace PetCare.Controllers.Admin
                     hinhanh = sp.hinhanh,
                     soluong = sp.soluong,
                     ma_sanpham = sp.ma_sanpham,
-                    thanhtien = sp.thanhtien
+                    thanhtien = sp.thanhtien,
+                    id_loaisp = sp.sanpham_loai.id // Add the product category ID
                 })
                 .ToListAsync();
 
-            return View(SPData);
+            // Filter the products based on the selected category
+            if (LoaiId > 0)
+            {
+                SPData = SPData.Where(a => a.id_loaisp == LoaiId).ToList(); // Filter based on LoaiId
+            }
+
+            return View(SPData); // Return filtered list of products
         }
 
         public IActionResult Create()

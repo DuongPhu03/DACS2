@@ -11,11 +11,11 @@
         </div>
         <div class="card-body">
             <p><strong>Order Code:</strong> @Model.ma_dh</p>
+            <p><strong>Nhân viên nhận đơn:</strong> @Model.ten_nv </p>
             <p><strong>Customer:</strong> @Model.ten_kh</p>
             <p><strong>Phone:</strong> @Model.sdt_kh</p>
             <p><strong>Shipping Address:</strong> @Model.diachi_giao</p>
             <p><strong>Status:</strong> @Model.trang_thai</p>
-            <p><strong>Total Price:</strong> @Model.tong_tien.ToString("N0")</p>
             <p><strong>Order Date:</strong> @Model.ngay_tao.ToString("dd/MM/yyyy HH:mm")</p>
         </div>
     </div>
@@ -31,7 +31,7 @@
                         <th>STT</th>
                         <th>Tên Sản Phẩm</th>
                         <th>Số Lượng Đặt</th>
-                        <th>Tổng Tiền</th>
+                        <th>Giá Thành</th>
                         <th>Thành Tiền</th>
                         <th>Hình Ảnh</th>
                     </tr>
@@ -47,8 +47,8 @@
                                 <td>@product.ten_sp</td>
                                 <td>@product.so_luong</td>
                                 <td>@product.gia_sp.ToString("N0")</td>
-                                <td>@product.thanh_tien.ToString("N0")</td>
-                                <td><img width="150" src="assets\sanphams\@product.hinh_anh" /></td>
+                                <td>@product.thanh_tien.ToString("N0")đ</td>
+                                <td><img width="150" src="assets/sanphams/@product.hinh_anh?height=100&width=100" /></td>
                             </tr>
                             tong_sl_dat += product.so_luong;
                         }
@@ -56,10 +56,16 @@
                     else
                     {
                         <tr>
-                            <td colspan="6" class="text-center">No products in this order.</td>
+                            <td colspan="6" class="text-center">Không có sản phẩm trong đơn này.</td>
                         </tr>
                     }
                 </tbody>
+                <tr>
+                    <td colspan="3">Tổng tiền</td>
+                    <td>
+                        <p>@Model.tong_tien.ToString("N0")đ</p>
+                    </td>
+                </tr>
             </table>
         </div>
     </div>

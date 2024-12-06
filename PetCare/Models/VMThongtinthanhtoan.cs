@@ -8,7 +8,7 @@ namespace PetCare.Models
         public string sdt_kh { get; set; } = "";
         [MaxLength(100)]
         public string diachi_giao { get; set; } = "";
-        public string ghi_chu { get; set; } = "";
+        public string? ghi_chu { get; set; }
         public List<Giohang> giohangs { get; set; }
     }
 }

@@ -1,12 +1,24 @@
-﻿@model List<Donhang>
+﻿@model List<VMChitietdh>
 @{
     Layout = "Admin/_LayoutAdmin";
 }
 
 <h2 class="text-center mb-5">Quản Lý Đơn Hàng</h2>
 
-<!-- Công việc thêm: Thêm điều kiện kiểm tra dữ liệu nếu như trống thì in dòng "Không có dữ liệu" -->
+<form asp-action="Index" class="mb-3" method="get">
+    <div class="form-group row g-3">
+        <select id="sortOption" name="sortOption" class="form-control col-auto">
+            @foreach (var item in ViewBag.SortOptions as List<SelectListItem>)
+            {
+                <option value="@item.Value">@item.Text</option>
+            }
+        </select>
+        <button type="submit" class="btn btn-primary col-auto">Tìm Kiếm</button>
+    </div>
+</form>
 
+<!-- Công việc thêm: Thêm điều kiện kiểm tra dữ liệu nếu như trống thì in dòng "Không có dữ liệu" -->
+<input type="hidden" id="DHid" />
 <table class="table">
     <thead>
         <tr>
@@ -18,28 +30,35 @@
             <th>Trạng Thái</th>
             <th>Ghi Chú</th>
             <th>Mã đơn hàng</th>
-            <th>Action</th>
+            <th>Chức năng</th>
         </tr>
     </thead>
     <tbody>
+        @{
+            int stt = 1;
+        }
         @foreach (var donhang in Model)
         {
             <tr>
-                <td>@donhang.id_dh</td>
-                <td>@donhang.id_kh</td>
+                <input type="hidden" value="@donhang.id_dh" name="id_dh"/>
+                <td>@stt</td>
+                <td>@donhang.ten_kh</td>
                 <td>@donhang.diachi_giao</td>
-                <td>@donhang.tong_tien</td>
-                <td>@donhang.CreateAt</td>
+                <td>@donhang.tong_tien.ToString("N0")</td>
+                <td>@donhang.ngay_tao</td>
                 <td>@donhang.trang_thai</td>
                 <td>@donhang.ghi_chu</td>
                 <td><a class="form-text" asp-action="Details" asp-route-id="@donhang.id_dh">@donhang.ma_dh</a></td>
                 <td style="white-space: nowrap">
-                    <a class="btn btn-primary btn-sm" asp-controller="DonHang" asp-action="Edit"
-                       asp-route-id="@donhang.id_dh">Edit</a>
-                    <a class="btn btn-danger btn-sm" asp-controller="DonHang" asp-action="Delete"
-                       asp-route-id="@donhang.id_dh" onclick="return confirm('Chắc chắn xóa sản phẩm này?')">Delete</a>
+                    <!-- Button trigger modal -->
+                    <a class="btn btn-primary btn-sm" asp-controller="DonHang" asp-action="UpdateStatus" asp-route-id="@donhang.id_dh">
+                        Cập nhật đơn hàng
+                    </a>
+                    <a class="btn btn-danger btn-sm" asp-controller="DonHang" asp-action="Delete" asp-route-id="@donhang.id_dh" onclick="return confirm('Chắc chắn xóa sản phẩm này?')">Xóa</a>
                 </td>
             </tr>
+            stt++;
         }
     </tbody>
 </table>
+

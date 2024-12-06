@@ -12,8 +12,8 @@ using PetCare.Services;
 namespace PetCare.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241130214554_UpdateRandom")]
-    partial class UpdateRandom
+    [Migration("20241206135627_FixDBContext")]
+    partial class FixDBContext
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,11 +33,6 @@ namespace PetCare.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id_chitietdh"));
 
-                    b.Property<string>("ghichu")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
                     b.Property<int>("id_dh")
                         .HasColumnType("int");
 
@@ -48,6 +43,8 @@ namespace PetCare.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("id_chitietdh");
+
+                    b.HasIndex("id_dh");
 
                     b.ToTable("Chitietdons");
                 });
@@ -83,7 +80,7 @@ namespace PetCare.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id_dichvu"));
 
-                    b.Property<int>("dang_dichvu")
+                    b.Property<int>("loai_dichvu")
                         .HasColumnType("int");
 
                     b.Property<string>("ten_dichvu")
@@ -157,7 +154,6 @@ namespace PetCare.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ghi_chu")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("id_kh")
@@ -182,6 +178,8 @@ namespace PetCare.Migrations
 
                     b.HasKey("id_dh");
 
+                    b.HasIndex("id_kh");
+
                     b.ToTable("Donhangs");
                 });
 
@@ -200,7 +198,8 @@ namespace PetCare.Migrations
 
                     b.Property<string>("matkhau")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("sdt_kh")
                         .IsRequired()
@@ -243,58 +242,50 @@ namespace PetCare.Migrations
 
             modelBuilder.Entity("PetCare.Models.Lichhen", b =>
                 {
-                    b.Property<int>("id_lich")
+                    b.Property<int>("id_lichhen")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id_lich"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id_lichhen"));
 
                     b.Property<DateTime>("CreateAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("DichVu")
+                    b.Property<int?>("DichVuid_dichvu")
                         .HasColumnType("int");
 
-                    b.Property<string>("can_nang")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
                     b.Property<string>("ghi_chu")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("khachhang")
+                    b.Property<int>("id_dichvu")
+                        .HasColumnType("int");
+
+                    b.Property<int>("id_kh")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("id_nv")
+                        .HasColumnType("int");
+
+                    b.Property<int>("id_tc")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("ngay_hen")
                         .HasColumnType("datetime2");
-
-                    b.Property<int?>("nhanvien_tiepnhan")
-                        .HasColumnType("int");
-
-                    b.Property<string>("sdt_kh")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("ten_kh")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("thu_cung")
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<decimal>("tong_tien")
-                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("trang_thai")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.HasKey("id_lich");
+                    b.HasKey("id_lichhen");
+
+                    b.HasIndex("DichVuid_dichvu");
+
+                    b.HasIndex("id_dichvu");
+
+                    b.HasIndex("id_kh");
+
+                    b.HasIndex("id_tc");
 
                     b.ToTable("Lichhens");
                 });
@@ -406,10 +397,9 @@ namespace PetCare.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id_pet"));
 
-                    b.Property<string>("cannang_pet")
-                        .IsRequired()
+                    b.Property<float>("cannang_pet")
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("real");
 
                     b.Property<string>("giong_pet")
                         .IsRequired()
@@ -429,7 +419,31 @@ namespace PetCare.Migrations
 
                     b.HasKey("id_pet");
 
+                    b.HasIndex("id_kh");
+
                     b.ToTable("Thucungs");
+                });
+
+            modelBuilder.Entity("PetCare.Models.Chitietdon", b =>
+                {
+                    b.HasOne("PetCare.Models.Donhang", "Donhang")
+                        .WithMany("Chitietdons")
+                        .HasForeignKey("id_dh")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Donhang");
+                });
+
+            modelBuilder.Entity("PetCare.Models.Donhang", b =>
+                {
+                    b.HasOne("PetCare.Models.Khachhang", "Khachhang")
+                        .WithMany("Donhangs")
+                        .HasForeignKey("id_kh")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Khachhang");
                 });
 
             modelBuilder.Entity("PetCare.Models.Khohang", b =>
@@ -443,6 +457,37 @@ namespace PetCare.Migrations
                     b.Navigation("Sanpham");
                 });
 
+            modelBuilder.Entity("PetCare.Models.Lichhen", b =>
+                {
+                    b.HasOne("PetCare.Models.DichVu", null)
+                        .WithMany("Lichhens")
+                        .HasForeignKey("DichVuid_dichvu");
+
+                    b.HasOne("PetCare.Models.DichVu", "DichVu")
+                        .WithMany()
+                        .HasForeignKey("id_dichvu")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("PetCare.Models.Khachhang", "Khachhang")
+                        .WithMany("Lichhens")
+                        .HasForeignKey("id_kh")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("petCare.Models.Thucung", "Thucung")
+                        .WithMany("Lichhens")
+                        .HasForeignKey("id_tc")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("DichVu");
+
+                    b.Navigation("Khachhang");
+
+                    b.Navigation("Thucung");
+                });
+
             modelBuilder.Entity("PetCare.Models.Sanpham", b =>
                 {
                     b.HasOne("PetCare.Models.Sanpham_Loai", "sanpham_loai")
@@ -452,6 +497,41 @@ namespace PetCare.Migrations
                         .IsRequired();
 
                     b.Navigation("sanpham_loai");
+                });
+
+            modelBuilder.Entity("petCare.Models.Thucung", b =>
+                {
+                    b.HasOne("PetCare.Models.Khachhang", "Khachhang")
+                        .WithMany("Thucungs")
+                        .HasForeignKey("id_kh")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Khachhang");
+                });
+
+            modelBuilder.Entity("PetCare.Models.DichVu", b =>
+                {
+                    b.Navigation("Lichhens");
+                });
+
+            modelBuilder.Entity("PetCare.Models.Donhang", b =>
+                {
+                    b.Navigation("Chitietdons");
+                });
+
+            modelBuilder.Entity("PetCare.Models.Khachhang", b =>
+                {
+                    b.Navigation("Donhangs");
+
+                    b.Navigation("Lichhens");
+
+                    b.Navigation("Thucungs");
+                });
+
+            modelBuilder.Entity("petCare.Models.Thucung", b =>
+                {
+                    b.Navigation("Lichhens");
                 });
 #pragma warning restore 612, 618
         }

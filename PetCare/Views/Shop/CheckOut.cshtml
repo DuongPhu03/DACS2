@@ -1,71 +1,74 @@
-﻿@model PetCare.Models.VMThongtinthanhtoan;
+﻿@model VMThongtinthanhtoan;
 @{
     Layout = "_LayoutStore";
 }
 
 <div class="container mt-3">
-    <h2 class="text-center mb-5">Chi Tiết Đơn Hàng</h2>
+    <h2 class="text-center mb-5">Thanh Toán</h2>
     <form method="POST" enctype="multipart/form-data" class="g-3">
     <div class="card">
-        <div class="card-body row"
-            <div class="col-md-6">
+        <div class="card-body row">
+            <h1>Thông tin giao hàng</h1>
+                <div class="col-md-6 mt-3">
                     <label asp-validation-for="ten_kh" class="form-label">Họ & Tên</label>
-                    <input type="text" class="form-control" asp-for="ten_kh">
+                    <input type="text" class="form-control" asp-for="ten_kh" required />
             </div>
-            <div class="col-md-6">
+                <div class="col-md-6 mt-3">
                     <label asp-validation-for="sdt_kh" class="form-label">Số điện thoại</label>
-                    <input type="text" class="form-control" asp-for="sdt_kh" />
+                    <input type="text" class="form-control" asp-for="sdt_kh" required />
             </div>
-            <div class="col-12">
+                <div class="col-12 mt-3">
                 <label asp-validation-for="diachi_giao" class="form-label">Địa chỉ giao hàng</label>
-                <input type="text" class="form-control" asp-for="diachi_giao" />
+                <input type="text" class="form-control" asp-for="diachi_giao" required />
             </div>
-            <div class="col-12">
+            <div class="col-12 mt-3">
                 <label asp-validation-for="ghi_chu" class="form-label">Ghi Chú</label>
                 <input type="text" class="form-control" asp-for="ghi_chu" />
             </div>
         </div>
     </div>
-    <div class="card mt-3">
-        <div class="card-body">
-            @{
-                decimal total = 0;
-                int stt = 1;
+        <div class="card mt-3 container">
+            <h1>Thông tin đơn hàng</h1>
+            <div class="card-body">
+                @{
+                    decimal total = 0;
+                    int stt = 1;
 
-                <table class="table">
-                    <tr>
-                        <th>#</th>
-                        <th>Sản phẩm</th>
-                        <th>Giá</th>
-                        <th>Số lượng</th>
-                        <th>Thành tiền</th>
-                    </tr>
-                    @foreach (var cartitem in Model.giohangs)
-                    {
-                        var thanhtien = cartitem.soluong * cartitem.Sanpham.thanhtien;
-                        total += thanhtien;
-
+                    <table class="table">
                         <tr>
-                            <td>@(stt++)</td>
-                            <td>@cartitem.Sanpham.ten_sanpham</td>
-                            <td>@(cartitem.Sanpham.thanhtien.ToString("N0"))</td>
-                            <td><input asp-for="@cartitem.soluong" id="@($"quantity-{cartitem.Sanpham.id_sanpham}")" /></td>
-                            <td>@(thanhtien.ToString("N0"))</td>
+                            <th>STT</th>
+                            <th>Sản phẩm</th>
+                            <th>Giá</th>
+                            <th>Số lượng</th>
+                            <th>Thành tiền</th>
                         </tr>
+                        @foreach (var cartitem in Model.giohangs)
+                        {
+                            var thanhtien = cartitem.soluong * cartitem.Sanpham.thanhtien;
+                            total += thanhtien;
+
+                            <tr>
+                                <td>@stt</td>
+                                <td>@cartitem.Sanpham.ten_sanpham</td>
+                                <td>@(cartitem.Sanpham.thanhtien.ToString("N0"))</td>
+                                <td><input asp-for="@cartitem.soluong" id="@($"quantity-{cartitem.Sanpham.id_sanpham}")" /></td>
+                                <td>@(thanhtien.ToString("N0"))</td>
+                            </tr>
+                        }
+                        <tr>
+                            <td colspan="4" class="text-right">Tổng tiền</td>
+                            <td>@(total.ToString("N0"))</td>
+                            <td></td>
+                        </tr>
+                        </table>
+                        stt++;
                     }
-                    <tr>
-                        <td colspan="4" class="text-right">Tổng tiền</td>
-                        <td>@(total.ToString("N0"))</td>
-                        <td></td>
-                    </tr>
-                </table>
-            }
+            </div>
         </div>
-    </div>
-    <div class="col-12 mt-3">
-        <div class="form-check">
-            <button type="submit" class="btn btn-success">Thanh Toán</button>
+        <div class="col-12 mt-3">
+            <div class="form-check">
+                <button type="submit" class="btn btn-success">Thanh Toán</button>
+            </div>
         </div>
-    </div>
-</form>
+    </form>
 </div>

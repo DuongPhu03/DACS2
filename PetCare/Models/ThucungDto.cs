@@ -15,8 +15,7 @@ namespace PetCare.Models
         [MaxLength(100)]
         public string giong_pet { get; set; } = "";
 
-        [MaxLength(100)]
-        public string cannang_pet { get; set; } = "";
+        public float cannang_pet { get; set; }
 
         public int id_kh { get; set; }
     }
