@@ -7,14 +7,21 @@
 
 <form asp-action="Index" class="mb-3" method="get">
     <div class="form-group row g-3">
-        <select id="sortOption" name="sortOption" class="form-control col-auto">
-            @foreach (var item in ViewBag.SortOptions as List<SelectListItem>)
-            {
-                <option value="@item.Value">@item.Text</option>
-            }
-        </select>
-        <button type="submit" class="btn btn-primary col-auto">Tìm Kiếm</button>
+        <div class="col-md-6 row">
+            <label class="form-label col mt-2" for="ngayhen">Ngày Hẹn </label>
+            <input type="date" class="form-control col" name="ngayhen" placeholder="Ngày Hẹn" value="" />
+        </div>
+        <div class="col-md-6 row">
+            <label class="form-label col mt-2" for="sortOption">Trạng Thái </label>
+            <select id="sortOption" name="sortOption" class="form-control col">
+                @foreach (var item in ViewBag.SortOptions as List<SelectListItem>)
+                {
+                    <option value="@item.Value">@item.Text</option>
+                }
+            </select>
+        </div>
     </div>
+    <button type="submit" class="btn btn-primary col-auto rounded mt-3">Tìm Kiếm</button>
 </form>
 <!-- Công việc thêm: Thêm điều kiện kiểm tra dữ liệu nếu như trống thì in dòng "Không có dữ liệu" -->
 

@@ -1,7 +1,7 @@
 ﻿@model VMChitietLichHen
 
 
-<h2 class="text-center">Đặt Lịch Hẹn</h2>
+<h2 class="text-center mb-3">Đặt Lịch Hẹn</h2>
 
 <form method="post" enctype="multipart/form-data" asp-action="Information">
     <div class="row">
@@ -10,18 +10,18 @@
             <input type="hidden" asp-for="id_kh" value="@ViewData["UserId"]" />
             <input type="hidden" name="id_tc" value="@ViewData["PetId"]" /> <!-- Pass id_tc -->
 
-            <div class="card bg-white border-dark rounded mb-3">
+            <div class="card bg-light rounded mb-3" style="height: 180px;">
                 <div class="card-body col-12">
                     <h3>Thông tin khách hàng</h3>
-                    <div class="row mb-3">
-                        <label class="col col-form-label">Tên Khách Hàng:</label>
+                    <div class="row mb-3 mt-2">
+                        <label class="col-3 col-form-label">Tên Khách Hàng:</label>
                         <div class="col">
                             <input class="form-control" asp-for="ten_kh" />
                             <span asp-validation-for="ten_kh" class="text-danger"></span>
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col col-form-label">Số điện thoại:</label>
+                        <label class="col-3 col-form-label">Số điện thoại:</label>
                         <div class="col">
                             <input class="form-control" asp-for="sdt_kh" />
                             <span asp-validation-for="sdt_kh" class="text-danger"></span>
@@ -30,11 +30,11 @@
                 </div>
             </div>
 
-            <div class="card bg-white border-dark rounded mb-3">
+            <div class="card bg-light rounded mb-3" style="height: 300px;">
                 <div class="card-body col-12">
                     <h3>Thông tin thú cưng</h3>
-                    <div class="row mb-3">
-                        <label class="col col-form-label">Thú Cưng</label>
+                    <div class="row mb-3 mt-2">
+                        <label class="col-3 col-form-label">Thú Cưng</label>
                         <div class="col">
                             <select class="form-control" asp-items="ViewBag.ThuCungs" name="ThuCungs"
                                     onchange="location.href='@Url.Action("Information", "Appointments")?id_pet=' + this.value">
@@ -42,19 +42,19 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col col-form-label">Tên Thú Cưng</label>
+                        <label class="col-3 col-form-label">Tên Thú Cưng</label>
                         <div class="col">
                             <input class="form-control" asp-for="ten_tc" readonly />
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col col-form-label">Giống Thú Cưng</label>
+                        <label class="col-3 col-form-label">Giống Thú Cưng</label>
                         <div class="col">
                             <input class="form-control" asp-for="giong_tc" readonly />
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col col-form-label">Cân Nặng</label>
+                        <label class="col-3 col-form-label">Cân Nặng</label>
                         <div class="col">
                             <input class="form-control" asp-for="can_nang" readonly />
                         </div>
@@ -64,11 +64,11 @@
         </div>
 
         <div class="col-6">
-            <div class="card bg-white border-dark rounded mb-3">
+            <div class="card bg-light rounded mb-3" style="height: 480px;">
                 <div class="card-body col-12">
                     <h3>Thông tin Lịch Hẹn</h3>
-                    <div class="row mb-3">
-                        <label class="col col-form-label">Dịch Vụ</label>
+                    <div class="row mb-3 mt-2">
+                        <label class="col-3 col-form-label">Dịch Vụ</label>
                         <div class="col">
                             <select asp-for="id_dichvu" class="form-control" asp-items="@(new SelectList(ViewBag.DichVuOption, "id_dichvu", "ten_dichvu"))">
                                 <option value="">-- Chọn Dịch Vụ --</option>
@@ -76,21 +76,21 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col col-form-label">Ngày Hẹn</label>
+                        <label class="col-3 col-form-label">Ngày Hẹn</label>
                         <div class="col">
-                            <input class="form-control" type="datetime-local" asp-for="ngay_hen" />
+                            <input class="form-control" type="datetime-local" asp-for="ngay_hen"/>
                             <span asp-validation-for="ngay_hen" class="text-danger"></span>
-                        </div>
+                        </div> 
                     </div>
                     <div class="row mb-3">
-                        <label class="col col-form-label">Ghi chú</label>
+                        <label class="col-3 col-form-label">Ghi chú</label>
                         <div class="col">
                             <textarea class="form-control" rows="5" asp-for="ghi_chu"></textarea>
                             <span asp-validation-for="ghi_chu" class="text-danger"></span>
                         </div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Lưu</button>
+                    <button type="submit" class="btn btn-dark fw-bold w-100 mx-2">Lưu</button>
                 </div>
             </div>
         </div>

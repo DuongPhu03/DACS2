@@ -7,14 +7,25 @@
 
 <form asp-action="Index" class="mb-3" method="get">
     <div class="form-group row g-3">
-        <select id="sortOption" name="sortOption" class="form-control col-auto">
-            @foreach (var item in ViewBag.SortOptions as List<SelectListItem>)
-            {
-                <option value="@item.Value">@item.Text</option>
-            }
-        </select>
-        <button type="submit" class="btn btn-primary col-auto">Tìm Kiếm</button>
+        <div class="col-md-4 row">
+            <label class="form-label col mt-2" for="ma_dh">Mã Đơn Hàng </label>
+            <input type="text" class="form-control col" name="ma_dh" placeholder="Mã Đơn Hàng" value="" />
+        </div>
+        <div class="col-md-4 row">
+            <label class="form-label col mt-2" for="ngaydat">Ngày Tạo Đơn</label>
+            <input type="date" class="form-control col" name="ngaydat" placeholder="Ngày Đặt Hàng" value="" />
+        </div>
+        <div class="col-md-4 row">
+            <label class="form-label col mt-2" for="sortOption">Trạng Thái </label>
+            <select id="sortOption" name="sortOption" class="form-control col">
+                @foreach (var item in ViewBag.SortOptions as List<SelectListItem>)
+                {
+                    <option value="@item.Value">@item.Text</option>
+                }
+            </select>
+        </div>
     </div>
+    <button type="submit" class="btn btn-primary col-auto rounded mt-3">Tìm Kiếm</button>
 </form>
 
 <!-- Công việc thêm: Thêm điều kiện kiểm tra dữ liệu nếu như trống thì in dòng "Không có dữ liệu" -->
@@ -45,7 +56,7 @@
                 <td>@donhang.ten_kh</td>
                 <td>@donhang.diachi_giao</td>
                 <td>@donhang.tong_tien.ToString("N0")</td>
-                <td>@donhang.ngay_tao</td>
+                <td>@donhang.ngay_tao.ToString("dd/MM/yyyy")</td>
                 <td>@donhang.trang_thai</td>
                 <td>@donhang.ghi_chu</td>
                 <td><a class="form-text" asp-action="Details" asp-route-id="@donhang.id_dh">@donhang.ma_dh</a></td>

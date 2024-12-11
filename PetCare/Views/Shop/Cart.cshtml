@@ -3,15 +3,14 @@
     Layout = "_LayoutStore";
 }
 <div class="container mt-3">
-    <h2>GIỎ HÀNG</h2>
+    <h2>Giỏ Hàng</h2>
     @if (Model.Count > 0)
     {
         decimal total = 0;
-        int stt = 1;
 
         <table class="table">
             <tr>
-                <th>#</th>
+                <th></th>
                 <th>Sản phẩm</th>
                 <th>Giá</th>
                 <th>Số lượng</th>
@@ -24,12 +23,12 @@
                 total += thanhtien;
 
                 <tr>
-                    <td>@(stt++)</td>
-                    <td>@cartitem.Sanpham.ten_sanpham</td>
-                    <td>@(cartitem.Sanpham.thanhtien.ToString("N0"))</td>
-                    <td><input asp-for="@cartitem.soluong" id="@($"quantity-{cartitem.Sanpham.id_sanpham}")" /></td>
-                    <td>@(thanhtien.ToString("N0"))</td>
-                    <td>
+                    <td width="125"><img src="~/assets/sanphams/@cartitem.Sanpham.hinhanh" class="img-fluid rounded" alt="@cartitem.Sanpham.ten_sanpham" /></td>
+                    <td class="align-middle">@cartitem.Sanpham.ten_sanpham</td>
+                    <td class="align-middle">@(cartitem.Sanpham.thanhtien.ToString("N0"))đ</td>
+                    <td class="align-middle" width="50"><input asp-for="@cartitem.soluong" id="@($"quantity-{cartitem.Sanpham.id_sanpham}")" /></td>
+                    <td class="align-middle">@(thanhtien.ToString("N0"))đ</td>
+                    <td class="align-middle">
                         <button class="btn btn-success updatecartitem"
                                 data-productid="@cartitem.Sanpham.id_sanpham">
                             Cập nhật
@@ -41,12 +40,12 @@
             }
             <tr>
                 <td colspan="4" class="text-right">Tổng tiền</td>
-                <td>@(total.ToString("n0"))</td>
+                <td>@(total.ToString("n0"))đ</td>
                 <td></td>
             </tr>
         </table>
 
-        <a asp-controller="Shop" asp-action="Checkout" asp-route-id="" class="btn btn-success">Gửi đơn hàng</a>
+        <a asp-controller="Shop" asp-action="Checkout" asp-route-id="" class="btn btn-dark fw-bold mt-3">Gửi đơn hàng</a>
 
         @section Scripts {
         <script>

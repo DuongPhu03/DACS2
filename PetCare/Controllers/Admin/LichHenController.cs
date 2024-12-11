@@ -16,12 +16,12 @@ namespace PetCare.Controllers.Admin
             this.context = context;
             this.environment = environment;
         }
-        public async Task<IActionResult> Index(string sortOption)
+        public async Task<IActionResult> Index(string? ngayhen, string? sortOption)
         {
             // Populate sorting options
             ViewBag.SortOptions = new List<SelectListItem>
             {
-                new SelectListItem { Value = "", Text = "-- Sắp Xếp Theo --" },
+                new SelectListItem { Value = "", Text = "-- Trạng Thái --" },
                 new SelectListItem { Value = "Đã xác nhận lịch", Text = "Đã xác nhận lịch" },
                 new SelectListItem { Value = "Đã tiếp nhận thú cưng", Text = "Đã tiếp nhận thú cưng" },
                 new SelectListItem { Value = "Đang làm dịch vụ", Text = "Đang làm dịch vụ" },
@@ -52,6 +52,10 @@ namespace PetCare.Controllers.Admin
                     trang_thai = lh.trang_thai
                 });
 
+            var query = appointments.AsQueryable();
+
+            if (!string.IsNullOrEmpty(ngayhen))
+                query = query.Where(ngay => ngay.ngay_hen.ToString().Contains(ngayhen));
             // Apply sorting if a sort option is selected
             if (!string.IsNullOrEmpty(sortOption))
             {

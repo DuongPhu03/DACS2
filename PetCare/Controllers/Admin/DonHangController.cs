@@ -16,12 +16,12 @@ namespace PetCare.Controllers.Admin
             this.context = context;
         }
         // GET: DonHangController
-        public async Task<IActionResult> Index(string sortOption)
+        public async Task<IActionResult> Index(string? ma_dh, string? ngaydat, string? sortOption)
         {
             // Populate sorting options
             ViewBag.SortOptions = new List<SelectListItem>
             {
-                new SelectListItem { Value = "", Text = "-- Sắp Xếp Theo --" },
+                new SelectListItem { Value = "", Text = "-- Trạng Thái --" },
                 new SelectListItem { Value = "Đã tạo đơn", Text = "Đã tạo đơn" },
                 new SelectListItem { Value = "Đang xử lý", Text = "Đang xử lý" },
                 new SelectListItem { Value = "Đang giao hàng", Text = "Đang giao hàng" },
@@ -41,14 +41,21 @@ namespace PetCare.Controllers.Admin
                 ma_dh = dh.ma_dh,
             });
 
+            var query = donhang.AsQueryable();
+            if (!string.IsNullOrEmpty(ma_dh))
+                query = query.Where(ma => ma.ma_dh.Contains(ma_dh));
+
+            if (!string.IsNullOrEmpty(ngaydat))
+                query = query.Where(ngay => ngay.ngay_tao.ToString().Contains(ngaydat));
+
             // Apply sorting if a sort option is selected
             if (!string.IsNullOrEmpty(sortOption))
             {
-                donhang = donhang.Where(a => a.trang_thai == sortOption);
+                query = donhang.Where(a => a.trang_thai == sortOption);
             }
 
             // Execute the query
-            var sortedOrders = await donhang.ToListAsync();
+            var sortedOrders = await query.ToListAsync();
 
             return View(sortedOrders);
         }

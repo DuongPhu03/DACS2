@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\models\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\models\\seeddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\views\\shared\\admin\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\views\\shared\\admin\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\controllers\\admin\\lichhencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\controllers\\admin\\lichhencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\views\\donhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\views\\donhang\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\views\\lichhen\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\views\\lichhen\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|d:\\[1] work\\[1] project\\doanpet asp\\[3] project\\petcare\\petcare\\controllers\\admin\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BEEBAA2D-54E8-4480-9BC0-8998730CAA30}|PetCare\\PetCare.csproj|solutionrelative:petcare\\controllers\\admin\\donhangcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,84 +34,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 246,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SeedData.cs",
-              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Models\\SeedData.cs",
-              "RelativeDocumentMoniker": "PetCare\\Models\\SeedData.cs",
-              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Models\\SeedData.cs",
-              "RelativeToolTip": "PetCare\\Models\\SeedData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T16:37:29.945Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "PetCare\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "PetCare\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAAFQAAAAAAAAAAAAIwE0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T16:28:53.74Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "PetCare\\Views\\Account\\Login.cshtml",
-              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\Account\\Login.cshtml",
-              "RelativeToolTip": "PetCare\\Views\\Account\\Login.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T16:27:12.505Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "PetCare\\Views\\Account\\Register.cshtml",
-              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\Account\\Register.cshtml",
-              "RelativeToolTip": "PetCare\\Views\\Account\\Register.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABEAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T16:26:08.968Z",
+              "Title": "DonHangController.cs",
+              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Controllers\\Admin\\DonHangController.cs",
+              "RelativeDocumentMoniker": "PetCare\\Controllers\\Admin\\DonHangController.cs",
+              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Controllers\\Admin\\DonHangController.cs",
+              "RelativeToolTip": "PetCare\\Controllers\\Admin\\DonHangController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAA5wCkAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T17:19:49.542Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "PetCare\\Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "PetCare\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\LichHen\\Index.cshtml",
+              "RelativeDocumentMoniker": "PetCare\\Views\\LichHen\\Index.cshtml",
+              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\LichHen\\Index.cshtml",
+              "RelativeToolTip": "PetCare\\Views\\LichHen\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T16:24:13.151Z",
+              "WhenOpened": "2024-12-11T17:19:25.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LichHenController.cs",
+              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Controllers\\Admin\\LichHenController.cs",
+              "RelativeDocumentMoniker": "PetCare\\Controllers\\Admin\\LichHenController.cs",
+              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Controllers\\Admin\\LichHenController.cs",
+              "RelativeToolTip": "PetCare\\Controllers\\Admin\\LichHenController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBcAAABGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T17:19:19.493Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\DonHang\\Index.cshtml",
+              "RelativeDocumentMoniker": "PetCare\\Views\\DonHang\\Index.cshtml",
+              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\DonHang\\Index.cshtml",
+              "RelativeToolTip": "PetCare\\Views\\DonHang\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-11T17:06:20.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "_LayoutAdmin.cshtml",
               "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\Shared\\Admin\\_LayoutAdmin.cshtml",
               "RelativeDocumentMoniker": "PetCare\\Views\\Shared\\Admin\\_LayoutAdmin.cshtml",
               "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\Shared\\Admin\\_LayoutAdmin.cshtml",
               "RelativeToolTip": "PetCare\\Views\\Shared\\Admin\\_LayoutAdmin.cshtml",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAADIAAAB+AAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAB0AAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-06T16:22:59.056Z",
+              "WhenOpened": "2024-12-11T16:49:37.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "PetCare\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "PetCare\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-11T16:44:39.61Z",
               "EditorCaption": ""
             }
           ]

@@ -28,7 +28,8 @@ namespace PetCare.Controllers.PetShop
 
             ViewData["UserId"] = user?.id_kh;
             ViewData["UserName"] = user?.ten_kh;
-            var sanpham = context.Sanphams.ToList();
+
+            var sanpham = context.Sanphams.OrderByDescending(sp => sp.id_sanpham).ToList();
             var loaisanpham = context.Sanpham_loais.ToList();
             var hienthi = new VMHienThiShop
             {
@@ -43,6 +44,15 @@ namespace PetCare.Controllers.PetShop
         [Route("/Category")]
         public async Task<IActionResult> Category()
         {
+            int? userId = HttpContext.Session.GetInt32("Username");
+            if (userId == null)
+            {
+                HttpContext.Session.Clear();
+            }
+            var user = await context.Khachhangs.FindAsync(userId);
+
+            ViewData["UserId"] = user?.id_kh;
+            ViewData["UserName"] = user?.ten_kh;
             // Fetch category and products
             var category = context.Sanpham_loais.ToList();
             var products = context.Sanphams.ToList();
@@ -61,7 +71,6 @@ namespace PetCare.Controllers.PetShop
         [Route("/Category/{id_loai:int}")]
         public async Task<IActionResult> Category(int id_loai)
         {
-
             int? userId = HttpContext.Session.GetInt32("Username");
             if (userId == null)
             {
@@ -147,7 +156,14 @@ namespace PetCare.Controllers.PetShop
             decimal totalPrice = cart.Sum(item => item.Sanpham.thanhtien * item.soluong);
 
             int? userId = HttpContext.Session.GetInt32("Username");
+            if (userId == null)
+            {
+                HttpContext.Session.Clear();
+            }
             var user = await context.Khachhangs.FindAsync(userId);
+
+            ViewData["UserId"] = user?.id_kh;
+            ViewData["UserName"] = user?.ten_kh;
 
             foreach (var item in cart)
             {

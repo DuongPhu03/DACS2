@@ -3,12 +3,24 @@
 }
 <h1>Dashboard</h1>
 <hr />
-<div class="" id="quick-action">
-    <div class="d-grid gap-2 d-md-block">
-        <a class="btn btn-primary btn-lg" asp-controller="DonHang" asp-action="Create">Thêm Sản Phẩm</a>
-        <a class="btn btn-primary btn-lg" asp-controller="KhachHang" asp-action="Create">Thêm Khách Hàng</a>
-        <a class="btn btn-primary btn-lg" asp-controller="NhanVien" asp-action="Create">Thêm Nhân Viên</a>
+<section id="hero" class="mb-3 section-width center">
+    <img src="https://placehold.co/1200x200" alt="Hero" class="img-fluid" />
+</section>
+<section id="quick-action" class="mb-3 section-width">
+    <div class="d-grid gap-3 d-md-block">
+        <a class="btn btn-primary fw-bold rounded p-4 justify-content-center" style="height: 120px; width: 120px;" asp-controller="DonHang" asp-action="Create">Thêm Sản Phẩm</a>
+        <a class="btn btn-primary fw-bold rounded p-4 justify-content-center" style="height: 120px; width: 120px;" asp-controller="KhachHang" asp-action="Create">Thêm Khách Hàng</a>
+        <a class="btn btn-primary fw-bold rounded p-4 justify-content-center" style="height: 120px; width: 120px;" asp-controller="NhanVien" asp-action="Create">Thêm Nhân Viên</a>
     </div>
-    <div class="" id="dashboard">
+</section>
+<section id="dashboard" class="mb-3 section-width">
+    <div class="row">
+        <div class="col">
+            <img src="https://placehold.co/600x300" alt="Stats" class="img-fluid" />
+
+        </div>
+        <div class="col">
+            <img src="https://placehold.co/600x300" alt="Stats" class="img-fluid" />
+        </div>
     </div>
-</div>
+</section>
