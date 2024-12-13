@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\[1] Work\[1] Project\DoanPet ASP\[3] Project\PetCare\PetCare
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Account/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/\[1\] Work/\[1\] Project/DoanPet ASP/\[3\] Project/PetCare/PetCare/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

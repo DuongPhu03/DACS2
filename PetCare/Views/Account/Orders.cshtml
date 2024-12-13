@@ -1,4 +1,7 @@
 ﻿@model List<VMChitietdh>
+@{
+    int stt = 1;
+}
 
 <h2 class="text-center mb-5">Quản Lý Đơn Hàng</h2>
 <!-- Công việc thêm: Thêm điều kiện kiểm tra dữ liệu nếu như trống thì in dòng "Không có dữ liệu" -->
@@ -18,9 +21,6 @@
         </tr>
     </thead>
     <tbody>
-        @{
-            int stt = 1;
-        }
         @foreach (var donhang in Model)
         {
             <tr>
@@ -34,7 +34,7 @@
                 <td>@donhang.ghi_chu</td>
                 <td><a class="form-text" asp-controller="Account" asp-action="Details" asp-route-id="@donhang.id_dh">@donhang.ma_dh</a></td>
                 <td style="white-space: nowrap">
-                    <a class="btn btn-danger btn-sm" asp-controller="Account" asp-action="Cancel" asp-route-id="@donhang.id_dh" onclick="return confirm('Chắc chắn xóa đơn hàng này?')">Xóa</a>
+                    <a class="btn btn-danger btn-sm" asp-controller="Account" asp-action="Cancel" asp-route-id="@donhang.id_dh" onclick="return confirm('Chắc chắn hủy đơn hàng này?')">Hủy</a>
                 </td>
             </tr>
             stt++;
