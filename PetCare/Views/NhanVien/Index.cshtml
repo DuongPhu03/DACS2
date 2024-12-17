@@ -7,41 +7,49 @@
 
 <div class="row mb-5">
     <div class="col">
-        <a class="btn btn-primary" asp-asp-controller="NhanVien" asp-action="Create">Thêm mới</a>
+        <a class="btn btn-primary" asp-controller="NhanVien" asp-action="Create">Thêm mới</a>
     </div>
     <div class="col">
     </div>
 </div>
 
 <!-- Công việc thêm: Thêm điều kiện kiểm tra dữ liệu nếu như trống thì in dòng "Không có dữ liệu" -->
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Họ & Tên</th>
-            <th>Số điện thoại</th>
-            <th>Email</th>
-            <th>Chức vụ</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var nhanvien in Model)
-        {
+@if (!Model.Any())
+{
+    <p class="text-center text-muted">Không có dữ liệu</p>
+}
+else
+{
+    <table class="table table-striped table-hover">
+        <thead class="table-dark">
             <tr>
-                <td>@nhanvien.id_nv</td>
-                <td>@nhanvien.ten_nv</td>
-                <td>@nhanvien.sdt_nv</td>
-                <td>@nhanvien.email_nv</td>
-                <td>@nhanvien.chucvu_nv</td>
-                <td style="white-space: nowrap">
-                    <a class="btn btn-primary btn-sm" asp-controller="NhanVien" asp-action="Edit"
-                       asp-route-id="@nhanvien.id_nv">Edit</a>
-                    <a class="btn btn-danger btn-sm" asp-controller="NhanVien" asp-action="Delete"
-                       asp-route-id="@nhanvien.id_nv" onclick="return confirm('Chắc chắn xóa sản phẩm này?')">Delete</a>
-                </td>
+                <th>ID</th>
+                <th>Họ & Tên</th>
+                <th>Số điện thoại</th>
+                <th>Email</th>
+                <th>Chức vụ</th>
+                <th>Thao Tác</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var nhanvien in Model)
+            {
+                <tr>
+                    <td>@nhanvien.id_nv</td>
+                    <td>@nhanvien.ten_nv</td>
+                    <td>@nhanvien.sdt_nv</td>
+                    <td>@nhanvien.email_nv</td>
+                    <td>@nhanvien.chucvu_nv</td>
+                    <td style="white-space: nowrap">
+                        <a class="btn btn-primary btn-sm" asp-controller="NhanVien" asp-action="Edit"
+                           asp-route-id="@nhanvien.id_nv">Sửa</a>
+                        <a class="btn btn-danger btn-sm" asp-controller="NhanVien" asp-action="Delete"
+                           asp-route-id="@nhanvien.id_nv" onclick="return confirm('Chắc chắn xóa sản phẩm này?')">Xóa</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+

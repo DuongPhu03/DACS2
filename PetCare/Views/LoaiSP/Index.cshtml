@@ -22,7 +22,7 @@
             <th>Hình Ảnh</th>
             <th>Tên</th>
             <th>Loại</th>
-            <th>Action</th>
+            <th>Thao Tác</th>
         </tr>
     </thead>
     <tbody>
@@ -34,9 +34,9 @@
                 <td>@loai_sp.name</td>
                 <td style="white-space: nowrap">
                     <a class="btn btn-primary btn-sm" asp-controller="LoaiSP" asp-action="Edit"
-                       asp-route-id="@loai_sp.id">Edit</a>
+                       asp-route-id="@loai_sp.id">Xóa</a>
                     <a class="btn btn-danger btn-sm" asp-controller="LoaiSP" asp-action="Delete"
-                       asp-route-id="@loai_sp.id" onclick="return confirm('Chắc chắn xóa sản phẩm này?')">Delete</a>
+                       asp-route-id="@loai_sp.id" onclick="return confirm('Chắc chắn xóa sản phẩm này?')">Sửa</a>
                 </td>
             </tr>
         }

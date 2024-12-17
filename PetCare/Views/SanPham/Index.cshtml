@@ -31,7 +31,7 @@
             <th>Giá Tiền</th>
             <th>Số lượng trong Kho</th>
             <th>Mã Sản Phẩm</th>
-            <th>Action</th>
+            <th>Thao Tác</th>
         </tr>
     </thead>
     <tbody>
@@ -47,9 +47,9 @@
                 <td>@sanpham.ma_sanpham</td>
                 <td style="white-space: nowrap">
                     <a class="btn btn-primary btn-sm" asp-controller="SanPham" asp-action="Edit"
-                       asp-route-id="@sanpham.id_sanpham">Edit</a>
+                       asp-route-id="@sanpham.id_sanpham">Sửa</a>
                     <a class="btn btn-danger btn-sm" asp-controller="SanPham" asp-action="Delete"
-                       asp-route-id="@sanpham.id_sanpham" onclick="return confirm('Chắc chắn xóa sản phẩm này?')">Delete</a>
+                       asp-route-id="@sanpham.id_sanpham" onclick="return confirm('Chắc chắn xóa sản phẩm này?')">Xóa</a>
                 </td>
             </tr>
         }

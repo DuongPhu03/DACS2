@@ -2,12 +2,14 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using petCare.Models;
 using PetCare.Models;
 using PetCare.Models.Authentication;
 using PetCare.Services;
 
 namespace PetCare.Controllers
 {
+    //Quản lý tài khoản
     public class AccountController : Controller
     {
         private readonly ApplicationDbContext context;
@@ -154,6 +156,64 @@ namespace PetCare.Controllers
             await context.SaveChangesAsync();
 
             return RedirectToAction("Profile", "Account");
+        }
+
+        public IActionResult ThuCung()
+        {
+            int? userId = HttpContext.Session.GetInt32("Username");
+            var khachhang = context.Khachhangs.Find(userId);
+            ViewData["UserId"] = khachhang.id_kh;
+            ViewData["UserName"] = khachhang.ten_kh;
+            if (khachhang == null)
+            {
+                return NotFound();
+            }
+
+            var thucungs = context.Thucungs.Where(t => t.id_kh == userId).ToList();
+
+            ViewData["IDKH"] = userId; // Pass the ID to the view
+
+            var viewModel = new VMKhachHangThuCung
+            {
+                Khachhang = khachhang,
+                Thucungs = thucungs
+            };
+
+            return View(viewModel);
+        }
+
+        public IActionResult CreateTC()
+        {
+            int? userId = HttpContext.Session.GetInt32("Username");
+            var khachhang = context.Khachhangs.Find(userId);
+            ViewData["UserId"] = khachhang.id_kh;
+            ViewData["UserName"] = khachhang.ten_kh;
+            ViewData["IDKH"] = khachhang.id_kh;
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreateTC(ThucungDto thucungdto)
+        {
+            if (!ModelState.IsValid)
+            {
+                ViewData["IDKH"] = thucungdto.id_kh; // Preserve IDKH in case of errors
+                return View(thucungdto);
+            }
+
+            var thucungs = new Thucung
+            {
+                ten_pet = thucungdto.ten_pet,
+                ngaysinh_pet = thucungdto.ngaysinh_pet,
+                giong_pet = thucungdto.giong_pet,
+                cannang_pet = thucungdto.cannang_pet,
+                id_kh = thucungdto.id_kh
+            };
+
+            context.Thucungs.Add(thucungs);
+            context.SaveChanges();
+
+            return RedirectToAction("ThuCung", "Account");
         }
 
         public async Task<IActionResult> Orders()

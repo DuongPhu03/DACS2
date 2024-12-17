@@ -45,7 +45,7 @@
                         </li>
                     </ul>
 
-                    <!-- Right-aligned Navigation Links -->
+                    <!-- Tài khoản Navigation Links -->
                     <ul class="navbar-nav ms-auto">
                         @if (ViewData["UserId"] != null)
                         {
@@ -57,6 +57,7 @@
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                                     <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Account" asp-action="Profile">Tài khoản</a></li>
                                     <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Account" asp-action="Orders">Đơn hàng</a></li>
+                                    <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Account" asp-action="ThuCung">Thú Cưng</a></li>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item text-dark" asp-area="" asp-controller="Account" asp-action="Logout">Đăng xuất</a></li>
                                 </ul>

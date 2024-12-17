@@ -30,8 +30,8 @@
 
 <!-- Công việc thêm: Thêm điều kiện kiểm tra dữ liệu nếu như trống thì in dòng "Không có dữ liệu" -->
 <input type="hidden" id="DHid" />
-<table class="table">
-    <thead>
+<table class="table table-bordered table-striped table-hover">
+    <thead class="table-dark text-center">
         <tr>
             <th>ID</th>
             <th>ID Khách Hàng</th>
@@ -51,16 +51,16 @@
         @foreach (var donhang in Model)
         {
             <tr>
-                <input type="hidden" value="@donhang.id_dh" name="id_dh"/>
-                <td>@stt</td>
-                <td>@donhang.ten_kh</td>
+                <input type="hidden" value="@donhang.id_dh" name="id_dh" />
+                <td class="text-center">@stt</td>
+                <td class="text-center">@donhang.ten_kh</td>
                 <td>@donhang.diachi_giao</td>
-                <td>@donhang.tong_tien.ToString("N0")</td>
-                <td>@donhang.ngay_tao.ToString("dd/MM/yyyy")</td>
-                <td>@donhang.trang_thai</td>
+                <td class="text-end">@donhang.tong_tien.ToString("N0") đ</td>
+                <td class="text-center">@donhang.ngay_tao.ToString("dd/MM/yyyy")</td>
+                <td class="text-center">@donhang.trang_thai</td>
                 <td>@donhang.ghi_chu</td>
-                <td><a class="form-text" asp-action="Details" asp-route-id="@donhang.id_dh">@donhang.ma_dh</a></td>
-                <td style="white-space: nowrap">
+                <td class="text-center"><a class="form-text" asp-action="Details" asp-route-id="@donhang.id_dh">@donhang.ma_dh</a></td>
+                <td class="text-center" style="white-space: nowrap">
                     <!-- Button trigger modal -->
                     <a class="btn btn-primary btn-sm" asp-controller="DonHang" asp-action="UpdateStatus" asp-route-id="@donhang.id_dh">
                         Cập nhật đơn hàng

@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\PetCare.csproj": {}
+    "D:\\DACS2\\PetCare\\PetCare.csproj": {}
   },
   "projects": {
-    "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\PetCare.csproj": {
+    "D:\\DACS2\\PetCare\\PetCare.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\PetCare.csproj",
+        "projectUniqueName": "D:\\DACS2\\PetCare\\PetCare.csproj",
         "projectName": "PetCare",
-        "projectPath": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\PetCare.csproj",
-        "packagesPath": "C:\\Users\\nhata\\.nuget\\packages\\",
-        "outputPath": "D:\\[1] Work\\[1] Project\\DoanPet ASP\\[3] Project\\PetCare\\PetCare\\obj\\",
+        "projectPath": "D:\\DACS2\\PetCare\\PetCare.csproj",
+        "packagesPath": "C:\\Users\\thaih\\.nuget\\packages\\",
+        "outputPath": "D:\\DACS2\\PetCare\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\nhata\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\thaih\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,7 +43,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -56,17 +60,17 @@
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.10, )"
+              "version": "[9.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.10, )"
+              "version": "[9.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.10, )"
+              "version": "[9.0.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -100,7 +104,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
